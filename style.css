@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.typed-text {
+  z-index: 999;
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2ff093;
+  margin-bottom: 100px;
+  margin-top: 110px;
+  line-height: 26px;
+
+  border-right: 2px solid transparent; /* Creates the blinking cursor */
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: var(--text-p-2);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+.card {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #011522;
+  border-radius: 8px;
+  z-index: 1;
+}
+.heading-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.root {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  z-index: 9999999;
+  background-color: #011522;
+  border-bottom: 2px solid #2ff093;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+.main {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  border-radius: 10em;
+  background-color: #212121;
+  transition: 0.3s;
+  box-shadow: 6px 6px 10px #000000, -6px -6px 10px #3c3c3c;
+}
+
+.checkmark svg {
+  width: 45px;
+  height: 45px;
+  margin-top: 11px;
+  margin-left: 12.5px;
+  fill: #264d39;
+  transition: 0.2s;
+}
+
+.checkmark:active {
+  box-shadow: 2px 2px 3px #000000, -2px -2px 3px #3c3c3c;
+}
+
+/* When the checkbox is checked */
+.container input:checked ~ .checkmark {
+  box-shadow: 4px 4px 6px #000000, -4px -4px 6px #3c3c3c;
+}
+
+.container .checkmark svg {
+  fill: #00ff7b;
+}
+
+.container input:checked ~ .checkmark:active {
+  box-shadow: 2px 2px 3px #000000, -2px -2px 3px #3c3c3c;
+}
+
+.display {
+  position: relative;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+/* Custom css */
+
+.spinner,
+.spinner * {
+  box-sizing: border-box;
+}
+
+.spinner {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  border: 4px solid #d946ef;
+  animation: s-animation 4s infinite ease;
+}
+
+.spinner .spinner-inner {
+  vertical-align: top;
+  display: inline-block;
+  background-color: #d946ef;
+  width: 100%;
+  opacity: 1;
+  animation: s-in-animation 4s infinite ease-in;
+}
+
+@keyframes s-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes s-in-animation {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
